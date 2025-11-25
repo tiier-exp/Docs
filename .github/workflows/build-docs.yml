@@ -5,16 +5,16 @@ on:
     branches:
       - main
     paths:
-      - 'onlyoffice-configs/**'
-      - 'Dockerfile.onlyoffice'
-      - '.github/workflows/build-onlyoffice.yml'
+      - 'configs/**'
+      - 'Dockerfile'
+      - '.github/workflows/build-docs.yml'
   workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
 
 jobs:
-  build-and-push-onlyoffice:
+  build-and-push-docs-service:
     runs-on: ubuntu-latest
     permissions:
       contents: read
